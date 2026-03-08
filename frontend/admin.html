@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Admin Panel</h2>
+
+<h3>Add Category</h3>
+<input id="catName" placeholder="Category name">
+<button onclick="addCategory()">Add</button>
+
+<h3>Add Subcategory</h3>
+<select id="catForSub"></select>
+<input id="subName" placeholder="Subcategory name">
+<button onclick="addSubcat()">Add</button>
+
+<h3>Add Item</h3>
+<select id="catForItem"></select>
+<select id="subForItem"></select>
+<input id="itemName" placeholder="Item name">
+<input id="itemPrice" type="number" placeholder="Price">
+<button onclick="addItem()">Add</button>
+
+<h3>All Items</h3>
+<div id="itemsList"></div>
+
+<h3>Sales Report</h3>
+<input type="date" id="fromDate"> to <input type="date" id="toDate">
+<button onclick="getSales()">Check</button>
+<div id="salesResult"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

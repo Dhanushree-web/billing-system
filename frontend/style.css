@@ -1,0 +1,168 @@
+/* ==========================================================
+   SUPER PREMIUM BILLING UI
+   GLASS EFFECT + GRADIENT + ICON BUTTONS + ANIMATIONS
+   ========================================================== */
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* GLASS CARD EFFECT */
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.35);
+}
+
+/* PAGE GRID */
+.container {
+    display: grid;
+    grid-template-columns: 32% 66%;
+    gap: 20px;
+}
+
+/* HEADINGS */
+h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* BUTTON COMMON */
+button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* CATEGORY BUTTONS – Blue → Purple gradient */
+.category-box button {
+    background: linear-gradient(145deg, #4f46e5, #9333ea);
+    color: white;
+    box-shadow: 0 6px 16px rgba(111,0,255,0.35);
+}
+.category-box button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(111,0,255,0.55);
+}
+
+/* SUBCATEGORY BUTTONS – Pink gradient */
+.subcategory-box button {
+    background: linear-gradient(145deg, #ff6bcb, #ff3cac);
+    color: white;
+    box-shadow: 0 6px 16px rgba(255,0,140,0.35);
+}
+.subcategory-box button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(255,0,140,0.6);
+}
+
+/* ITEM BUTTONS – Green gradient */
+.item-box button {
+    background: linear-gradient(145deg, #34d399, #059669);
+    color: white;
+    box-shadow: 0 6px 16px rgba(5,150,105,0.4);
+}
+.item-box button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(5,150,105,0.6);
+}
+
+/* LAYOUT FOR BUTTON BOXES */
+.category-box,
+.subcategory-box,
+.item-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* REMOVE BUTTON – Red */
+.remove-btn {
+    background: #dc2626;
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 4px 14px rgba(220,38,38,0.4);
+}
+.remove-btn:hover {
+    background: #b91c1c;
+    transform: scale(1.09);
+}
+
+/* CART TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+thead {
+    background: rgba(255,255,255,0.3);
+}
+thead th {
+    padding: 14px;
+    font-size: 15px;
+    color: #222;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.4);
+}
+tbody td {
+    padding: 14px;
+    background: rgba(255,255,255,0.33);
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+/* FORM INPUT */
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.7);
+}
+
+/* FOOTER BUTTONS */
+.bottom-buttons button {
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    margin: 6px;
+}
+
+#newBill { background: linear-gradient(135deg,#2563eb,#1e40af); color:white; }
+#clearAll { background: linear-gradient(135deg,#dc2626,#b91c1c); color:white; }
+#saveDraft { background: linear-gradient(135deg,#10b981,#047857); color:white; }
+#loadDraft { background: linear-gradient(135deg,#d97706,#92400e); color:white; }
+#printBill { background: linear-gradient(135deg,#6d28d9,#4c1d95); color:white; }
+
+/* ICON STYLE FIX */
+button i { font-size: 16px; }
+
+/* PRINT MODE */
+@media print {
+    .category-box, .subcategory-box, .item-box,
+    .bottom-buttons, .container .left {
+        display: none !important;
+    }
+}
